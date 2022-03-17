@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] countries = {"Russia", "Ukraine", "USA", "Brasil", "Kazakhstan", "China"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ListView countriesList = findViewById(R.id.countriesList);
+
+        String[] countries = getResources().getStringArray(R.array.counrieslist);
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, countries);
 
